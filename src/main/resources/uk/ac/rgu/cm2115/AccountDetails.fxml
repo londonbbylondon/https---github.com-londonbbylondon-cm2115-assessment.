@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    spacing="10"
+    fx:controller="uk.ac.rgu.cm2115.controllers.AccountDetailsController"
+    style="-fx-background-color: #f2f2f2; -fx-padding: 10px 20px;"
+    alignment="TOP_CENTER">
+    <children>
+
+        <HBox spacing="15">
+            <Button text="Back" onAction="#backToCustomer" />
+            <Label text="Account Details" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        </HBox>
+
+        <HBox spacing="10" alignment='CENTER'>
+            <HBox spacing="10">
+                <Label layoutX="30.0" layoutY="30.0" text="Account Name: "
+                    style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+                <Label layoutX="150.0" layoutY="80.0" fx:id="accountName" />
+            </HBox>
+            <HBox spacing="10">
+                <Label layoutX="30.0" layoutY="80.0" text="Account Number:"
+                    style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+                <Label layoutX="150.0" layoutY="120.0" fx:id="accountNumber" />
+            </HBox>
+        </HBox>
+
+        <HBox spacing="10">
+            <Label layoutX="30.0" layoutY="160.0" text="Account Balance:"
+                style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+            <Label layoutX="150.0" layoutY="160.0" fx:id="accountBalance"
+                style="-fx-font-size: 24px;" />
+        </HBox>
+
+        <HBox spacing="10">
+            <TextField layoutX="150.0" layoutY="240.0" fx:id="depositAmountTextField" />
+            <Button layoutX="30.0" layoutY="240.0" text="Deposit" onAction="#deposit" />
+        </HBox>
+
+        <HBox>
+            <TextField layoutX="150.0" layoutY="280.0" fx:id="withdrawAmountTextField" />
+            <Button layoutX="30.0" layoutY="280.0" text="Withdraw" onAction="#withdraw" />
+        </HBox>
+    </children>
+
+</VBox>

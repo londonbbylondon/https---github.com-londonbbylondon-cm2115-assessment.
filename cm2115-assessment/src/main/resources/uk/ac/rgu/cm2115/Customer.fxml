@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ChoiceBox?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    spacing="15"
+    fx:controller="uk.ac.rgu.cm2115.controllers.CustomerController"
+    style="-fx-background-color: #f2f2f2; -fx-padding: 10px 20px;"
+    alignment="CENTER">
+
+    <HBox spacing="15">
+        <Button text="Go back to Account Manager" onAction="#returnToAccountManager"
+            style="-fx-font-size: 14px;" />
+        <Label text="Customer Details" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    </HBox>
+
+    <VBox spacing='10' alignment='CENTER'>
+        <HBox alignment='CENTER' spacing='10'>
+            <HBox spacing="10">
+                <Label text="Name: " style="-fx-font-size: 14px;" />
+                <TextField fx:id="customerName" style="-fx-font-size: 14px;" />
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Address: " style="-fx-font-size: 14px;" />
+                <TextField fx:id="customerAddress" style="-fx-font-size: 14px;" />
+            </HBox>
+        </HBox>
+
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <Label text="Type: " style="-fx-font-size: 14px;" />
+            <ChoiceBox fx:id="customerType" style="-fx-font-size: 14px;" GridPane.columnIndex="1" />
+        </GridPane>
+
+        <Button text="Update Customer Details" onAction="#updateCustomerDetails"
+            style="-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: white;" />
+    </VBox>
+
+    <ListView fx:id="customerAccounts" style="-fx-font-size: 14px;" />
+
+    <HBox spacing="15">
+        <Button text="View Account Details" onAction="#viewAccountDetails"
+            style="-fx-font-size: 14px;" />
+
+        <Button text="Open New Account" onAction="#openNewAccount" style="-fx-font-size: 14px;" />
+    </HBox>
+
+
+</VBox>
